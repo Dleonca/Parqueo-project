@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+.section{
+    position: absolute;
+    top: 50px;
+    height: calc(100% - 50px);
+    width: 100%;
+    box-sizing: border-box;
+    overflow: auto;
+    display: flex;
+    flex-direction: row;
+}
+.select-type-section, .select-type, .input-number{
+    width: 100%;
+    height: 25px;
+    margin-bottom: 15px;
+    border: none;
+    border-bottom: 1px solid black;
+}
+.btn-section-form{
+    width: 100%;
+    height: 25px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 50px;
+    background-color: #8BE5F7;  
+}
+.btn-section-form:hover{
+    background-color: #9FEC7A ;
+}
+.box-izq , .box-der{
+    width: 50%;
+    height: 100%;
+    padding: 20px 20px;
+    box-sizing: border-box;
+}
+.box-izq{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.box-der{
+    display: flex;
+    background-color: rgb(139, 247, 155, .4);
+}
+
+.contenido, .title-section-izq{
+    color: black;
+    font-family: 'Varela Round', sans-serif;
+}
+.form-section{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
