@@ -26,7 +26,7 @@
     background-color: #8BE5F7;  
 }
 .btn-section-form:hover{
-    background-color: #9FEC7A ;
+    background-color: hsl(24, 90%, 52%) ;
 }
 .box-izq , .box-der{
     width: 50%;
