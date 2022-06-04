@@ -9,6 +9,7 @@
     overflow: auto;
     display: flex;
     flex-direction: row;
+    background-image: url(../images/secciones-parqueo.jpg);
 }
 .select-type-section, .select-type, .input-number{
     width: 100%;
@@ -26,7 +27,7 @@
     background-color: #8BE5F7;  
 }
 .btn-section-form:hover{
-    background-color: hsl(24, 90%, 52%) ;
+    background-color: #9FEC7A ;
 }
 .box-izq , .box-der{
     width: 50%;
@@ -38,13 +39,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: white;
 }
 .box-der{
     display: flex;
-    background-color: rgb(139, 247, 155, .4);
+    background-color: rgba(0, 0, 0, .9);
 }
 
-.contenido, .title-section-izq{
+ .title-section-izq{
     color: black;
     font-family: 'Varela Round', sans-serif;
 }
