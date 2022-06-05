@@ -2,20 +2,30 @@ import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import logo from "../IconParqueo.ico";
 import "./css-components/header.css";
+import {auth} from '../firebase'
+import {withRouter} from 'react-router-dom'
 
-const Header = () => {
+const Header = (props) => {
+  const cerrarSesion = () => {
+    auth.signOut()
+    .then( () =>{
+      props.history.push('/')
+    })
+
+  }
+
   return (
     <header className="headPrincipal">
       <div className="TitleHead">
         <img src={logo} className="logoPrincipal" alt="logo" />
-        <Link className="titlePrincipal" to="/">
+        <Link className="titlePrincipal" to="/rutas/Inicio">
           PARQUEO
         </Link>
       </div>
       <div className="navPrincipal">
         <li className="listHead">
           <ul className="list-item">
-            <NavLink className="item-nav" to="/" exact>
+            <NavLink className="item-nav" to="/rutas/Inicio" exact>
               Inicio
             </NavLink>
           </ul>
@@ -40,6 +50,20 @@ const Header = () => {
               Config
             </NavLink>
           </ul>
+          <ul className="list-item">
+            {
+              props.firebaseUser !== null ? (
+                <button className="item-nav" onClick= { () => cerrarSesion() } >
+                  Log Out
+                </button>
+              ):(
+                <NavLink to="/">
+                  Login
+                </NavLink>
+              )
+            }
+          
+          </ul>
         </li>
       </div>
       
@@ -47,4 +71,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default withRouter(Header);

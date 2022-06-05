@@ -1,47 +1,43 @@
 import './App.css';
 import React from 'react';
 import Login from './components/Login'
-/*
-import Header from './components/Header'
-import Inicio from './components/Inicio'
-import Section from './components/Section'
-import Tarifas from './components/Tarifas'
-import RegistroIngreso from './components/RegistroIngreso'
-import Configuracion from './components/Configuracion'
+import Rutas from './components/Rutas'
 import  {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
-*/
+import {auth} from './firebase'
+
 function App() {
-  return (
-  /*
+  const[firebaseUser, setFirebaseUser] = React.useState(false)
+
+  React.useEffect( () => {
+    auth.onAuthStateChanged(user =>{
+      console.log(user)
+      if (user) {
+        setFirebaseUser(user)   
+      } else {
+          setFirebaseUser(null)
+      }
+
+    })
+  });
+  return firebaseUser !== false ? (
+/* */
     <Router>
       <div className="container">
-        <Header/>
         <Switch>
           <Route path="/" exact>
-            <Inicio/>
+            <Login/>
           </Route>
-          <Route path="/section" >
-             <Section/>
+          <Route path="/inicio" >
+             <Rutas firebaseUser ={firebaseUser} />
           </Route>
-          <Route path="/tarifas" >
-             <Tarifas/>
-          </Route>
-          <Route path="/registro" >
-             <RegistroIngreso/>
-          </Route>
-          <Route path="/configuracion" >
-             <Configuracion/>
-          </Route>
+        
         </Switch>
       </div>
     </Router>
-  */
- 
-   <>
-   <Login/>
-   </>
-  
-  );
+
+  ): (
+    <p>Cargando...</p>
+  )
 }
 
 export default App;
