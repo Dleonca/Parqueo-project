@@ -5,12 +5,13 @@ import Inicio from './Inicio'
 import Section from './Section'
 import Tarifas from './Tarifas'
 import RegistroIngreso from './RegistroIngreso'
-import  {BrowserRouter as Router, Switch, Route, NavLink} from 'react-router-dom'
+import  {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import {auth} from '../firebase'
 import {withRouter} from 'react-router-dom'
 
 function Rutas(props) {
     const [user, setUser] = React.useState(null)
+    
 
     React.useEffect(() =>{
         if (auth.currentUser) {
@@ -29,7 +30,7 @@ function Rutas(props) {
       <Header firebaseUser = {props.firebaseUser} />
       <Switch>
         <Route path="/inicio"exact>
-          <Inicio />
+          <Inicio user = {user} />
         </Route>
         <Route path="/section" >
            <Section/>

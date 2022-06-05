@@ -1,7 +1,7 @@
 import React from "react";
 import logo from "../IconParqueo.ico";
 import "./css-components/login.css";
-import {auth, db} from '../firebase'
+import {auth} from '../firebase'
 import {withRouter} from 'react-router-dom'
 
 
