@@ -1,9 +1,11 @@
 import React from "react";
 import "./css-components/section.css";
+
 const Section = () => {
   return (
     <div className="section">
-     <section className="box-izq"> <h2 className="title-section-izq">Administrador de Secciones de Parqueadero</h2><form action="#" className="form-section">
+     <section className="box-izq">
+      <h2 className="title-section-izq">Administrador de Secciones de Parqueadero</h2><form action="#" className="form-section">
        <label htmlFor="select-t" className="label-form-section">Tipo de Transporte</label>
         <select className="select-type" name="select-t" >
           <option value="value1">CARRO</option>
@@ -44,7 +46,7 @@ const Section = () => {
         <button className="btn-section-form" type="submit">Agregar</button>
       </form></section>
      <section className="box-der">
-       <h2 className="contenido">Contenido</h2>
+       <h2 className="title-section-izq">Listado de Secciones</h2>
      </section>
      
     </div>

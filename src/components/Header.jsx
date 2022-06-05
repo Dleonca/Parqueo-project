@@ -1,31 +1,50 @@
-import React from 'react'
+import React from "react";
+import { Link, NavLink } from "react-router-dom";
 import logo from "../IconParqueo.ico";
 import "./css-components/header.css";
 
 const Header = () => {
-
   return (
-      <header className="headPrincipal">
-         <div className="TitleHead">
-           <img src={logo} className="logoPrincipal" alt="logo" />
-           <a href="" className="titlePrincipal">PARQUEO</a>
-         </div>
-         <div className="navPrincipal">
-             <li className="listHead">
-                 <ul className='list-item'><a href="#" className="item-nav"> Inicio</a></ul>
-                 <ul className='list-item'><a href="#" className="item-nav"> Seccion</a></ul>
-                 <ul className='list-item'><a href="#" className="item-nav"> Tarifa</a></ul>
-                 <ul className='list-item'><a href="#" className="item-nav"> Registro</a></ul>
-                 <ul className='list-item'><a href="#" className="item-nav"> config</a></ul>
-             </li>
-         </div>
-         <div className="optionReg">
-             <li className="listReg">
-                 <ul></ul>
-             </li>
-         </div>
-      </header>
-  )
-}
+    <header className="headPrincipal">
+      <div className="TitleHead">
+        <img src={logo} className="logoPrincipal" alt="logo" />
+        <Link className="titlePrincipal" to="/">
+          PARQUEO
+        </Link>
+      </div>
+      <div className="navPrincipal">
+        <li className="listHead">
+          <ul className="list-item">
+            <NavLink className="item-nav" to="/" exact>
+              Inicio
+            </NavLink>
+          </ul>
+          
+          <ul className="list-item">
+            <NavLink className="item-nav" to="/section">
+              Seccion
+            </NavLink>
+          </ul>
+          <ul className="list-item">
+            <NavLink className="item-nav" to="/tarifas">
+              Tarifa
+            </NavLink>
+          </ul>
+          <ul className="list-item">
+            <NavLink className="item-nav" to="/registro">
+              Registro
+            </NavLink>
+          </ul>
+          <ul className="list-item">
+            <NavLink className="item-nav" to="/configuracion">
+              Config
+            </NavLink>
+          </ul>
+        </li>
+      </div>
+      
+    </header>
+  );
+};
 
-export default Header
+export default Header;

@@ -1,55 +1,88 @@
 @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
   
-  .App {
-    background: linear-gradient( 25deg, #9FEC7A,#8BF7CA, #8BE5F7);  
-    text-align: center;
+  .App-login {
+    background-image: url(../images/parkingLogin.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /*linear-gradient( 25deg, #9FEC7A,#8BF7CA, #8BE5F7); */ 
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
+
   }
   
   .App-logo {
-    height: 20vmin;
+    height: 15vmin;
     pointer-events: none;
+  }
+  .sectionLeft{
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .boxOpacity{
     width: 70%;
     height: 80vh;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     background-color: rgb(0,0,0, .2);
+    border-radius: 50px;
   }
   .titleApp{
+    margin: 0;
     font-family: 'Varela Round', sans-serif;
     color: white;
   }
+  .titleApp:hover{
+    background-color: transparent;
+    background: linear-gradient( 25deg, #9FEC7A,#8BF7CA, #8BE5F7);
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .titleInicio{
+    font-size: 1em;
+    font-family: 'Varela Round', sans-serif;
+    font-weight: 400;
+    color: black;
+  }
   .inputLogin{
     width: 100%;
-    height: 25px;
+    height: 30px;
     display: block;
     margin-bottom: 10px;
+    background-color: inherit;
     border: none;
-
+    border-bottom: 1px solid black;
   }
   .buttonLogin{
-    width: 80%;
+    width: 100%;
     height: 30px;
     border-radius: 5px;
     border: none;
-    background-color: white;
+    background-color: black;
+    color: white;
+    font-family: 'Varela Round', sans-serif;
+    font-weight: 400;
+    font-size: 0.7em;
+    margin: 20px 0;
+  }
+  .buttonLogin:hover{
+    background-color: yellow;
+    color: black;
   }
   .sectionLogo, .boxLogin{
-    width: 50%;
-    height: 100%;
+    width: 70%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
   .formLogin{
-    width: 80%;
+    width: 100%;
   }
 
   @media (max-width: 750px) {
@@ -72,4 +105,15 @@
       justify-content: center;
       align-items: center;
     }
+  }
+  .alert{
+    width: 100%;
+    height: 30px;
+    background-color: #FEA09C;
+    color: #F23E36;
+    display: block;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    padding: 5px 8px;
+    text-align: center;
   }
