@@ -5,7 +5,6 @@ import Inicio from './Inicio'
 import Section from './Section'
 import Tarifas from './Tarifas'
 import RegistroIngreso from './RegistroIngreso'
-import Configuracion from './Configuracion'
 import  {BrowserRouter as Router, Switch, Route, NavLink} from 'react-router-dom'
 import {auth} from '../firebase'
 import {withRouter} from 'react-router-dom'
@@ -40,9 +39,6 @@ function Rutas(props) {
         </Route>
         <Route path="/registro" >
            <RegistroIngreso/>
-        </Route>
-        <Route path="/configuracion" >
-           <Configuracion/>
         </Route>
       </Switch>
     </div>

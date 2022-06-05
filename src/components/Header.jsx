@@ -46,11 +46,6 @@ const Header = (props) => {
             </NavLink>
           </ul>
           <ul className="list-item">
-            <NavLink className="item-nav" to="/configuracion">
-              Config
-            </NavLink>
-          </ul>
-          <ul className="list-item">
             {
               props.firebaseUser !== null ? (
                 <button className="item-nav" onClick= { () => cerrarSesion() } >
