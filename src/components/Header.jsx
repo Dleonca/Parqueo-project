@@ -8,37 +8,37 @@ const Header = () => {
     <header className="headPrincipal">
       <div className="TitleHead">
         <img src={logo} className="logoPrincipal" alt="logo" />
-        <a className="titlePrincipal" href="/">
+        <Link className="titlePrincipal" to="/">
           PARQUEO
-        </a>
+        </Link>
       </div>
       <div className="navPrincipal">
         <li className="listHead">
           <ul className="list-item">
-            <a className="item-nav" href="/">
+            <NavLink className="item-nav" to="/" exact>
               Inicio
-            </a>
+            </NavLink>
           </ul>
           
           <ul className="list-item">
-            <a className="item-nav" href="/">
+            <NavLink className="item-nav" to="/section">
               Seccion
-            </a>
+            </NavLink>
           </ul>
           <ul className="list-item">
-            <a className="item-nav" href="/">
+            <NavLink className="item-nav" to="/tarifas">
               Tarifa
-            </a>
+            </NavLink>
           </ul>
           <ul className="list-item">
-            <a className="item-nav" href="/">
+            <NavLink className="item-nav" to="/registro">
               Registro
-            </a>
+            </NavLink>
           </ul>
           <ul className="list-item">
-            <a className="item-nav" href="/">
+            <NavLink className="item-nav" to="/configuracion">
               Config
-            </a>
+            </NavLink>
           </ul>
         </li>
       </div>

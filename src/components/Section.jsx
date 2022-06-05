@@ -46,7 +46,7 @@ const Section = () => {
         <button className="btn-section-form" type="submit">Agregar</button>
       </form></section>
      <section className="box-der">
-       <h1>hola</h1>
+       <h2 className="title-section-izq">Listado de Secciones</h2>
      </section>
      
     </div>

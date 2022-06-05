@@ -2,14 +2,14 @@
 
 .section{
     position: absolute;
-    top: 50px;
+    top: 51px;
     height: calc(100% - 50px);
     width: 100%;
     box-sizing: border-box;
     overflow: auto;
     display: flex;
     flex-direction: row;
-    background-image: url(../images/secciones-parqueo.jpg);
+    background: white;
 }
 .select-type-section, .select-type, .input-number{
     width: 100%;
@@ -34,16 +34,17 @@
     height: 100%;
     padding: 20px 20px;
     box-sizing: border-box;
+    background-color: white;
 }
 .box-izq{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: white;
+    
 }
 .box-der{
     display: flex;
-    background-color: rgba(0, 0, 0, .9);
+   
 }
 
  .title-section-izq{
