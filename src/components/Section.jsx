@@ -2,6 +2,7 @@ import React from "react";
 import "./css-components/section.css";
 
 const Section = () => {
+  
   return (
     <div className="section">
      <section className="box-izq">
