@@ -10,7 +10,7 @@ import Configuracion from './components/Configuracion'
 import  {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 function App() {
   return (
-  
+  /*
     <Router>
       <div className="container">
         <Header/>
@@ -33,7 +33,12 @@ function App() {
         </Switch>
       </div>
     </Router>
-    
+  */
+ 
+   <>
+   <Login/>
+   </>
+  
   );
 }
 
