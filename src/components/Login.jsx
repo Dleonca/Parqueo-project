@@ -1,10 +1,11 @@
 import React from "react";
 import logo from "../IconParqueo.ico";
 import "./css-components/login.css";
-//import {auth, db} from '../firebase'
+import {auth, db} from '../firebase'
+import {withRouter} from 'react-router-dom'
 
 
-const Login = () => {
+const Login = (props) => {
   const [email, setEmail]= React.useState('')
   const [pass, setPass]= React.useState('')
   const [error, setError] = React.useState(null)
@@ -25,6 +26,32 @@ const Login = () => {
     }
     setError(null)
   }
+   
+  const loginuser = React.useCallback(async () => {
+    try {
+     const res = await auth.signInWithEmailAndPassword(email,pass)
+     console.log(res)
+     setEmail('')
+     setPass('')
+     setError(null)
+      props.history.push('/inicio')
+
+
+    } catch (error) {
+      console.log(error)
+      if (error.code === 'auth/invalid-email') {
+        setError('Email no registrado')
+      }
+      if (error.code === 'auth/user-not-found') {
+        setError('Usuario no registrado')
+      }
+      if (error.code === 'auth/wrong-password') {
+        setError('Contraseña Incorrecta')
+      }
+    }
+
+ 
+  },[email,pass, props.history])
 
   return (
     <div className="App-login">
@@ -45,7 +72,6 @@ const Login = () => {
                 </div>
               )
             }
-            
             <label htmlFor="email" className="titleInputlogin">Email</label>
             <input
               class="inputLogin"
@@ -56,7 +82,6 @@ const Login = () => {
               value={email}
             />
           
-           
              <label htmlFor="pass" className="titleInputlogin">Password</label>
             <input
               class="inputLogin"
@@ -66,8 +91,8 @@ const Login = () => {
               onChange={e => setPass(e.target.value)}
               value={pass}
             />
-            
-            <button class="buttonLogin">Log In</button>
+
+            <button type="submit"  className="buttonLogin" onClick={loginuser}>Log In</button>
           </form>
         </div>
       </div>
@@ -76,4 +101,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default withRouter(Login);

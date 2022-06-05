@@ -2,7 +2,10 @@ import React from 'react'
 
 const Inicio = () => {
   return (
-    <div>Welcome Administrador Inicio..</div>
+    <div>
+      <h1>Welcome Administrador </h1>
+
+      </div>
   )
 }
 
