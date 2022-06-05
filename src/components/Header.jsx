@@ -8,14 +8,14 @@ const Header = () => {
     <header className="headPrincipal">
       <div className="TitleHead">
         <img src={logo} className="logoPrincipal" alt="logo" />
-        <Link className="titlePrincipal" to="/">
+        <Link className="titlePrincipal" to="/rutas/Inicio">
           PARQUEO
         </Link>
       </div>
       <div className="navPrincipal">
         <li className="listHead">
           <ul className="list-item">
-            <NavLink className="item-nav" to="/" exact>
+            <NavLink className="item-nav" to="/rutas/Inicio" exact>
               Inicio
             </NavLink>
           </ul>
